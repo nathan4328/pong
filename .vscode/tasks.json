@@ -1,0 +1,54 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "C/C++: clang++ build active file",
+			"command": "/usr/bin/clang++",
+			"args": [
+				"-fcolor-diagnostics",
+				"-fansi-escape-codes",
+				"-g",
+				"-I${workspaceFolder}/dependencies/include",
+				"-I${workspaceFolder}/freetype",
+				"-L${workspaceFolder}/dependencies/library",
+				"${workspaceFolder}/ikpMP3.dylib",
+				"${workspaceFolder}/libirrklang.dylib",
+				"${workspaceFolder}/dependencies/library/libglfw.3.4.dylib",
+				"${workspaceFolder}/dependencies/library/libfreetype.6.dylib",
+				"${workspaceFolder}/glad.c",
+				"${workspaceFolder}/texture.cpp",
+				"${workspaceFolder}/shader.cpp",
+				"${workspaceFolder}/resource_manager.cpp",
+				"${workspaceFolder}/ball_object.cpp",
+				"${workspaceFolder}/game_level.cpp",
+				"${workspaceFolder}/game_object.cpp",
+				"${workspaceFolder}/game.cpp",
+				"${workspaceFolder}/sprite_renderer.cpp",
+				"${workspaceFolder}/text_renderer.cpp",
+				"${file}",
+				"-o",
+				"${workspaceFolder}/app",
+				"-framework",
+				"OpenGL",
+				"-framework",
+				"Cocoa",
+				"-framework",
+				"IOKit",
+				"-framework",
+				"CoreVideo",
+				"-framework",
+				"CoreFoundation",
+				"-Wno-deprecated"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "compiler: /usr/bin/clang++"
+		},
+	]
+   }
